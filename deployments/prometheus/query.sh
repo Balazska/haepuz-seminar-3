@@ -1,0 +1,1 @@
+curl -g 'http://prometheus-kube-prometheus-prometheus.monitoring:9090/api/v1/query?' --data-urlencode 'query=http_requests_total'

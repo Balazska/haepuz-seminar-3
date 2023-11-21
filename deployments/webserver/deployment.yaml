@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: seminar-3-webserver
+  labels:
+    app: seminar-3-webserver
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: seminar-3-webserver
+  template:
+    metadata:
+      labels:
+        app: seminar-3-webserver
+    spec:
+      containers:
+      - name: seminar-3-webserver
+        image: docker.io/balazska/seminar-2-webserver:v1
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:
+            cpu: 100m
+          requests:
+            cpu: 50m
