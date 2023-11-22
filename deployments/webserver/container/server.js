@@ -20,7 +20,7 @@ var handleRequest = async function(request, response) {
   } else {
     console.log('Received request for URL: ' + request.url);
     let sum = 0;
-    for(let i = 0; i < 5000000; i++){
+    for(let i = 0; i < 500000; i++){
       sum += Math.atan(Math.sin(Math.cos(100)))
     }
     console.log(sum)
