@@ -1,5 +1,6 @@
 FROM node:lts
 EXPOSE 8080
 COPY server.js .
-RUN npm i prom-client
+COPY package.json .
+RUN npm i
 CMD node server.js
